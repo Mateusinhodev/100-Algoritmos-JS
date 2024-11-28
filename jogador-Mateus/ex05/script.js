@@ -19,10 +19,6 @@ capturaValores.addEventListener('click', function(e) {
 
     const media = ((nota1 + nota2)/2);
 
-    if(isNaN(nota1) || isNaN(nota2)) {
-        alert("A nota deve ser um número");
-        return;
-    } else {
-        const resultado = document.getElementById("resultado").innerHTML = `A média das notas ${nota1} e ${nota2} é igual a ${media}`
-    }
+    const resultado = document.getElementById("resultado").innerHTML = `A média das notas ${nota1} e ${nota2} é igual a ${media}`
+    
 });
