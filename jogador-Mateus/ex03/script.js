@@ -1,4 +1,4 @@
-/* ::: Exercicio 02 :::
+/* ::: Exercicio 03 :::
 
 Crie um programa que leia o nome e o salário de um funcionário, mostrando no final uma mensagem.
 Ex:
