@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: steelblue;
+            color: white;
+        }
+
+        #efeito {
+        font-family: monospace;
+        font-size: 24px;
+        border-right: 2px solid black; /* Simula o cursor */
+        white-space: nowrap; /* Mantém o texto em uma linha */
+        overflow: hidden; /* Oculta o texto excedente */
+        display: inline-block;
+        animation: blink-caret 0.6s step-end infinite; /* Cursor piscando */
+        font-size: 70px;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="efeito"></div>
+</body>
+<script>
+    const text = "Olá, Mundo!";
+    const efeito = document.getElementById("efeito");
+    let index = 0;
+
+    function cursor() {
+        if (index < text.length) {
+            efeito.textContent += text.charAt(index);
+            index++;
+            setTimeout(cursor, 100); // Controla a velocidade de digitação (100ms por letra)
+        }
+    }
+
+    cursor();
+
+</script>
+</html>
