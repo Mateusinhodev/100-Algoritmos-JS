@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: steelblue;
+            gap: 10px;
+            flex-direction: column;
+        }
+        label{
+            text-align: center;
+            font-size: 22px;
+            color: white;
+        }
+        input{
+            height: 20px;
+            width: 300px;
+            padding:10px;
+            border-style: none;
+            
+        }
+        button{
+            color: white;
+            font-weight: bold;
+            border-style: none;
+            background-color: limegreen;
+            height: 40px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 320px;
+        }
+        button:hover{
+            background-color: mediumseagreen;
+        }
+    </style>
+</head>
+<body>
+        <label>Entre com o primeiro numero</label>
+        <input type="text" id="numero1">
+        <label>Entre com o segundo numero</label>
+        <input type="text" id="numero2">
+        <button onclick="resultado()">CALCULAR</button>
+        <p id="resultado"></p>
+</body>
+<script>
+
+function resultado(){
+    const numero1 = parseInt(document.querySelector('#numero1').value); 
+    const numero2 = parseInt(document.querySelector('#numero2').value);
+
+    const soma = numero1 + numero2
+
+    const resultado = document.getElementById('resultado');
+
+    if(!soma){
+        resultado.innerHTML = 'Verifique se o valor foi inserido corretamente'
+    } 
+    if(soma){
+        resultado.innerHTML = `O resultado da soma é: ${soma}`
+    }
+
+}
+
+</script>
+</html>
