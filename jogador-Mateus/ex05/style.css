@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 211, 101);
+}
+
+#titulo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 350px;
+    height: 210px;
+    margin: 0px auto;
+    border: 1px solid #000;
+    background-color: rgb(249, 222, 152);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+#nota1, #nota2 {
+    width: 70px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+#btn-enviar {
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    border-radius: 16px;
+    background-color: rgb(255, 184, 5);;
+}
+
+#resultado {
+    text-align: center;
+    margin-top: 50px;
+}
