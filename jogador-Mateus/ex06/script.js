@@ -12,7 +12,7 @@ const capturaValores = document.getElementById('btn-enviar');
 capturaValores.addEventListener('click', function(e) {
     e.preventDefault();
 
-    const num = parseFloat(document.getElementById('num').value);
+    const num = Number(document.getElementById('num').value);
     console.log(num);
 
     const sucessor = num + 1;
